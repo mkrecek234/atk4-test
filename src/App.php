@@ -9,19 +9,13 @@ use phpDocumentor\Reflection\PseudoTypes\False_;
 
 date_default_timezone_set('Europe/Berlin');
 
-/**
- * Example implementation of your Authenticated application.
- *
- * @package Atk4\Erp
- */
+
 class App extends \Atk4\Ui\App
 {
     use \Atk4\Core\ConfigTrait;
     
 
     public $db;
-    public $techdb;
-    public $auth;
 
 
      function __construct()
@@ -32,11 +26,7 @@ class App extends \Atk4\Ui\App
         $config_file = '../src/config.php';
 
         $this->readConfig($config_file, 'php');
-		//$this->ui_persistence->date_format = 'd.m.Y';
-		
-   		$this->title = 'DTE ERP ' . $this->version;
-		
-        
+      
         $this->initLayout([\Atk4\Ui\Layout\Maestro::class]);
             
 

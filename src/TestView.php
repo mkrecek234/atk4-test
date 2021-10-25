@@ -25,8 +25,9 @@ class TestView extends View
 	
     public function setModel(Model $model)
     {
+        
         parent::setModel($model);
-	
+        
 		\Atk4\Ui\View::addTo($this, ['ui' => 'divider']);
 	
 
@@ -37,6 +38,7 @@ class TestView extends View
 
 		$gr = $form->addGroup(['width' => 'two']);
 		$gr->addControl('title', ['width' => 'eight']);#
+		
 		
 		$form->addControl('team_id', [\Atk4\Ui\Form\Control\Dropdown::class, 'caption' => 'Team', 'width' => 'four']);
 		$form->addControl('agent_id', [\Atk4\Ui\Form\Control\DropdownCascade::class, 'cascadeFrom' => 'team_id', 'reference' => 'Teammember', 'caption' => 'Manager', 'width' => 'four']);

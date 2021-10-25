@@ -19,11 +19,9 @@ class Team extends \Atk4\Data\Model {
         parent::init();
         
         $this->addFields([
-            'name','sort'
+            'name'
         ]);
-        $this->hasMany('Message',['model' => [Message::class]]);
         
         $this->hasMany('Teammember', ['model' => [Teammember::class]]);
-        $this->setOrder('sort');
     }
 }

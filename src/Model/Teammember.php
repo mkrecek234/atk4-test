@@ -18,7 +18,6 @@ class Teammember extends \Atk4\Data\Model {
     {
         parent::init();
         
-        $this->addFields([['read_only', 'type'=>'boolean'], ['manager', 'type' => 'boolean'], ['admin', 'type' => 'boolean']]);
         $this->hasOne('id', ['model' => [Agent::class], 'default' => 0])->addTitle(['field'=> 'name']);
         $this->hasOne('team_id', ['model' => [Team::class], 'default' => 0])->addTitle();
         
