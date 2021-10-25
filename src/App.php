@@ -18,13 +18,12 @@ class App extends \Atk4\Ui\App
     public $db;
 
 
-     function __construct()
+     protected function init(): void
     {
-        parent::__construct();
+        parent::init();
         
         
         $config_file = '../src/config.php';
-
         $this->readConfig($config_file, 'php');
       
         $this->initLayout([\Atk4\Ui\Layout\Maestro::class]);
@@ -37,8 +36,6 @@ class App extends \Atk4\Ui\App
  
             $layout->addMenuItem(['Test', 'icon'=>'calendar alternate outline'], ['test']);
             $layout->addMenuItem(['Test with record', 'icon'=>'calendar alternate outline'], ['test.php?tid=202736']);
-            
-            
      
     }
     

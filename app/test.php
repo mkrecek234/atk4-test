@@ -6,6 +6,7 @@ include '../src/app.php';
 	
 
 $app = new App('admin');
+$app->invokeInit();
 
 // $app->add('Header')->set('Ticket');
 
