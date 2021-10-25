@@ -1,0 +1,17 @@
+{
+	"require" : {
+		"atk4/ui" : "dev-develop as 3.0.99",
+		"atk4/data" : "dev-develop as 3.0.99",
+		"atk4/core" : "dev-develop as 3.0.99"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Atk4\\Erp\\" : "src/"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"atk4\\audit\\tests\\" : "tests/"
+		}
+	}
+}
